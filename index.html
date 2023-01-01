@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="all">
+
+        <div class="small-circle"></div>
+        <div class="big-circle"></div>
+
+        <div class="nav-container">
+            <ul>
+                <li><a href="#">
+                        <h1 style="font-size: 3rem;">SunnyDay</h1>
+                    </a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Map</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><button class="getapp-btn">Get App</button></a></li>
+            </ul>
+        </div>
+
+        <div class="main-container">
+
+            <div class="left">
+                <h4>Different Kind of Weather<br> inside of 7/24 hours</h4>
+                <div class="input-container">
+                    <button id="searchbtn" onclick="weather(cityName.value), backPicture(cityName.value)
+                    "><i class="fa-solid fa-magnifying-glass" style="font-size: 2rem; padding: 5px;"></i></button>
+                    <input type="text" id="cityname" placeholder="Search Here">
+                </div>
+                <p>Best way to know Weather</p>
+            </div>
+
+            <div class="right">
+
+                <div class="right-nav">
+                    <div id="weathericon"> </div>
+                    <div class="nav-text">
+                        <h3 id="description" style="text-transform: capitalize;">Weather</h3>
+                        <h5 id="name"></h5>
+                    </div>
+                </div>
+
+                <div class="right-main">
+
+                    <div class="right-main-left">
+
+                        <div class="celci">
+                            <div id="weathericonbig"></div>
+                            <div class="celci-info">
+                                <div id="celci"></div>
+                                <p id="cloud"></p>
+                            </div>
+                        </div>
+
+                        <div class="weatherinfo">
+                            <div class="weatherinfo-nav">
+                                <h3>Local Weather Report</h3>
+                            </div>
+                            <div class="info-text">
+                                <ul>
+                                    <li>
+                                        <div id="humid"> Humidity : </div>
+                                    </li>
+                                    <li>
+                                        <div id="wind">Feels like :</div>
+                                    </li>
+                                    <li>
+                                        <div id="speed">Wind speed : </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="right-main-right">
+
+                        <div class="img" id="img">
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="foot-container">
+        <img src="" alt="">
+        <div class="foot-text">
+            <h3>Cloudly</h3>
+            <h5>23 december, Baku, Azerbaijan</h5>
+        </div> -->
+    </div>
+
+</body>
+
+</html>
