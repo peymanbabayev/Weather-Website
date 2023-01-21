@@ -5,15 +5,15 @@ const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='
 const apiUnsplash = 'pL_K8WhpZcp6aW0r2hrnMAuiqHBh8RvmQkjujylAL1o'
 
 
-const weather = (cityName) => {
-    fetch(`${apiUrl}${cityName}&appid=${apiKey}&units=metric&lang=az`)
+const weather = async(cityName) => {
+    await fetch(`${apiUrl}${cityName}&appid=${apiKey}&units=metric&lang=az`)
         .then(response => response.json())
         .then(data => {
-            weatherinfo(data)
+           weatherinfo(data)
         })
 }
-const backPicture = (cityName) => {
-    fetch(`https://api.unsplash.com/search/photos?page=1&query=${cityName}&client_id=${apiUnsplash}`)
+const backPicture = async(cityName) => {
+    await fetch(`https://api.unsplash.com/search/photos?page=1&query=${cityName}&client_id=${apiUnsplash}`)
         .then(request => request.json())
         .then(respon => {
             document.getElementById('img').innerHTML = `<img src = '${respon.results[Math.floor(Math.random() * 10)].urls.small}' width="460px" height="385px"/>`
